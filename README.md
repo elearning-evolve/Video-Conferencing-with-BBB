@@ -32,7 +32,6 @@ After the session is over the plugin can also display the recording of the sessi
 * Add New option for BBB Rooms on backend is limited to only a maximum of 2 Rooms
 * Join room on the same WP page is not available. Only join in a new full screen window is supported
 
-
 ### Pro Version Features ###
 There is also a Pro version available with this plugin that offers the below features:
 * Moderators frontend Room management area

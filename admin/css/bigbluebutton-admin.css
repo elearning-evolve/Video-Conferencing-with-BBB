@@ -2,6 +2,59 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+.bbb-settings-btn {
+    background: #332cf2;
+    border: 0;
+    border-radius: .375rem;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    line-height: 1.2;
+    padding: 0.6rem 0.6rem;
+    text-align: left;
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+.bbb-settings-btn:disabled {
+    color: #787878;
+    cursor: auto;
+}
+
+.bbb-settings-btn:hover {
+    transform: scale(1.05);
+}
+
+.bbb-settings-btn:active {
+    transform: scale(1.05) translateY(.125rem);
+}
+
+.bbb-settings-btn:focus {
+    outline: 0 solid transparent;
+}
+
+.bbb-settings-btn:focus:before {
+    border-width: .125rem;
+    content: "";
+    left: calc(-1*.375rem);
+    pointer-events: none;
+    position: absolute;
+    top: calc(-1*.375rem);
+    transition: border-radius;
+}
+
+.bbb-settings-btn:not(:focus-visible) {
+    outline: 0 solid transparent;
+}
+
+.bbb-settings-btn:active {
+    transform: translateY(.125rem);
+}
+
 #bbb-general-settings-form .button-start-instance {
     margin-left: 8px;
     -webkit-appearance: button;

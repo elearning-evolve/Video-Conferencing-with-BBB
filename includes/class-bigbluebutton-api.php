@@ -80,6 +80,7 @@ class Bigbluebutton_Api {
 
 		$error_msg  = ( isset( $response->messageKey ) ? $response->messageKey . ': ' : '' );
 		$error_msg .= ( isset( $response->message ) ? $response->message : '' );
+		$error_msg .= ( isset( $response->error ) ? ' BBB Error: ' . $response->error : '' );
 
 		return $error_msg;
 	}
@@ -136,7 +137,7 @@ class Bigbluebutton_Api {
 		);
 
 		$url = self::build_url( 'join', $arr_params );
-		
+
 		return $url;
 	}
 
@@ -400,7 +401,7 @@ class Bigbluebutton_Api {
 	public static function test_bigbluebutton_server( $url, $salt ) {
 		$test_url      = $url . 'api/getMeetings?checksum=' . sha1( 'getMeetings' . $salt );
 		$full_response = self::get_response( $test_url );
-		
+
 		if ( is_wp_error( $full_response ) ) {
 			return false;
 		}
@@ -439,7 +440,18 @@ class Bigbluebutton_Api {
 	 */
 	private static function response_to_xml( $full_response ) {
 		try {
-			$xml = new SimpleXMLElement( wp_remote_retrieve_body( $full_response ) );
+
+			libxml_use_internal_errors( true );
+
+			$xml = simplexml_load_string( wp_remote_retrieve_body( $full_response ) );
+
+			if ( false === $xml ) {
+				//$errors = libxml_get_errors();
+
+				wp_die( 'BBB Error: Cannot process the API response from your BBB server. Please check if your server is up and running or contact your BBB hosting' );
+
+				libxml_clear_errors();
+			}
 		} catch ( Exception $exception ) {
 			return new stdClass();
 		}
@@ -478,7 +490,7 @@ class Bigbluebutton_Api {
 		$params = http_build_query( $args );
 
 		$url .= $params . '&' . 'checksum=' . sha1( $type . $params . $salt_val );
-		
+
 		return $url;
 	}
 }

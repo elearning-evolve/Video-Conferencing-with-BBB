@@ -85,7 +85,7 @@
 						<?php do_action( 'bbb_settings_tab_content' ); ?>
 					<?php endif; ?>
 				 </div>
-				<input class="button button-primary bbb-settings-submit" type="submit" value="<?php esc_html_e( 'Save Changes' ); ?>"/>
+				<input class="bbb-settings-btn bbb-settings-submit" type="submit" value="<?php esc_html_e( 'Save Changes' ); ?>"/>
 			</form>
 		</div>
 		<section id="shortcodes" class="bbb-pro-shortcode-usage">
@@ -212,10 +212,20 @@
 	</div>
 	<div class="zvc-position-floater-right">
 		<div class="zvc-information-sec">
+			<img width="100%" height="40" src="<?php echo VIDEO_CONF_WITH_BBB_IMG_URL . '/learndash-logo.webp'; ?>" title="LearnDash LMS Development Service" alt="LearnDash LMS Development Service"/>
+				<h3>Need help with LMS Building?</h3>
+				<p>Being officially recognized as LearnDash LMS experts, we're here to aid you with your customization needs.</p>
+				<a target="_blank" rel="noopener"
+					href="<?php echo esc_url( 'https://elearningevolve.com/learndash-developer/' ); ?>">
+					<button class="bbb-settings-btn">View LearnDash Services</button>
+				</a>
+			</div>
+			
+		<div class="zvc-information-sec">
 				<h3>Never miss an important update</h3>
 				<a target="_blank" rel="noopener"
 					href="<?php echo esc_url( 'https://elearningevolve.com/subscribe/?display_name=' . $display_name . '&user_email=' . $user_email ); ?>">
-					<button class="button button-primary">Subscribe</button>
+					<button class="bbb-settings-btn">Subscribe</button>
 				</a>
 			</div>
 		<div class="zvc-information-sec">
@@ -256,21 +266,16 @@
 			</ul>
 		</div>
 		<?php endif; ?>
-		<div class="zvc-information-sec">
-			<h3>Our Plugins</h3>
-				<?php if ( ! Bigbluebutton_Loader::is_bbb_pro_active() ) : ?>
+		<?php if ( ! Bigbluebutton_Loader::is_bbb_pro_active() ) : ?>
+			<div class="zvc-information-sec">
+				<h3>Pro Version</h3>
 					<img width="100%" height="180" src="<?php echo VIDEO_CONF_WITH_BBB_IMG_URL . '/video-conferencing-with-BBB.png'; ?>" title="BigBlueButton WordPress Pro" alt="BigBlueButton WordPress Pro"/>
 					<p>
 						Pro version of this plugin that enables you to create fully white-label virtual classrooms & enhanced customization options for BBB Rooms.
 					</p>
-					<a rel="noopnerer"  target="_blank" href="https://elearningevolve.com/products/video-conferencing-with-bbb-pro/"><button class="button button-primary">View More</button></a>
+					<a rel="noopnerer"  target="_blank" href="https://elearningevolve.com/products/video-conferencing-with-bbb-pro/"><button class="bbb-settings-btn">View More</button></a>
 					<hr />
-				<?php endif; ?>
-				<img width="100%" height="180" src="<?php echo VIDEO_CONF_WITH_BBB_IMG_URL . '/zoom-wordpress-plugin.png'; ?>" title="Zoom WordPress Plugin" alt="Zoom WordPress Plugin"/>
-				<p>
-					Create & join Zoom meetings directly from your WordPress site with our powerful <a target="_blank" rel="noopener" href="https://elearningevolve.com/products/zoom-wordpress-plugin">Zoom WordPress Plugin</a>
-				</p>
-				<a rel="noopnerer"  target="_blank" href="https://elearningevolve.com/products/zoom-wordpress-plugin"><button class="button button-primary">View More</button></a>
-		</div>
+			</div>
+		<?php endif; ?>
 	</div>
 </div>

@@ -251,7 +251,7 @@ class Bigbluebutton_Admin {
 				$permalink = ( get_permalink( $post_id ) ? get_permalink( $post_id ) : '' );
 				echo '<span class="tooltip" onclick="copyToClipboard(this)" onmouseout="copyClipboardExit(this)"
 						data-value="' . esc_url( $permalink ) . '">
-						<span class="tooltiptext invite-tooltip">' . esc_html( 'Copy Invite URL', 'bigbluebutton' ) . '</span>
+						<span class="tooltiptext invite-tooltip">' . esc_html__( 'Copy Invite URL', 'bigbluebutton' ) . '</span>
 					<span class="bbb-button button">
 						<span class="bbb-dashicon dashicons dashicons-admin-page"></span>'
 						. __( 'Copy', 'bigbluebutton' ) .
@@ -274,7 +274,7 @@ class Bigbluebutton_Admin {
 				}
 				echo '<span class="tooltip" onclick="copyToClipboard(this)" onmouseout="copyClipboardExit(this)"
 						data-value="[bigbluebutton token=' . esc_attr( $token ) . ']">
-						<span class="tooltiptext shortcode-tooltip">' . esc_html( 'Copy Shortcode', 'bigbluebutton' ) . '</span>
+						<span class="tooltiptext shortcode-tooltip">' . esc_html__( 'Copy Shortcode', 'bigbluebutton' ) . '</span>
 						<input type="text" disabled value="[bigbluebutton token= ' . esc_attr( $token ) . ']"/>
 						<span class="bbb-dashicon dashicons dashicons-admin-page"></span>
 					</span>';

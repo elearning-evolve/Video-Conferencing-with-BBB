@@ -4,9 +4,9 @@ Contributors: blindsidenetworks, jfederico, yfngdu, elearningevolve, adeelraza_7
 Donate link: https://elearningevolve.com/products/donate/  
 Tags: virtual classroom, video conference, BigBlueButton, BBB, online meeting, web conferencing, online teaching, learning management system, LMS, online session, live training, video conferencing, video conference, meetings, virtual meetings
 Requires at least: 5.1  
-Tested up to: 6.5.3  
+Tested up to: 6.5.4  
 Requires PHP: 7.2  
-Stable tag: 2.4.0  
+Stable tag: 2.4.1  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -172,6 +172,9 @@ To allow a user role to manage recordings add the capability, **manage_bbb_room_
 8. BBB Rooms can also be organized using Categories.
 
 ## Changelog ##
+### 2.4.1 ###
+* Added: Translation support for a few text snippets in the plugin that were not translation friendly
+
 ### 2.4.0 ###
 * Updated: Improved UI and button styling
 * Compatibility: Tested with WordPress v6.5.3 

@@ -17,12 +17,6 @@
 				 <div class="tab-content">
 					<?php if ( null === $tab ) : ?>
 						<?php do_action( 'bbb_setup_tab_content' ); ?>
-						<!-- <h4><?php esc_html_e( 'There are 3 methods to get the BBB server EndPoint URL and Salt required below:', 'bigbluebutton' ); ?></h4>
-						<ol>
-							<li><?php echo sprintf( __( '%1$s You can use the default test install server hosted by %2$s.', 'bigbluebutton' ), '<strong>' . esc_html( 'Default (for dev/staging site only)', 'bigbluebutton' ) . ':</strong>', $bbb_host ); ?></li>
-							<li><?php echo sprintf( __( '%1$s You can host and %2$s BBB on your own server.', 'bigbluebutton' ), '<strong>' . esc_html( 'Fairly Technical', 'bigbluebutton' ) . ':</strong>', '<a target="_blank" rel="noopener" href="https://bigbluebutton.org/2018/03/28/install-bigbluebutton-in-15-minutes/">' . esc_html( 'install', 'bigbluebutton' ) . '</a>' ); ?></li>
-							<li><?php echo sprintf( __( '%1$s You can choose one of our recommended managed %2$s.', 'bigbluebutton' ), '<strong>' . esc_html( 'Recommended (for production site)', 'bigbluebutton' ) . ':</strong>', '<a target="_blank" rel="noopener" href="https://elearningevolve.com/blog/bigbluebutton-hosting">' . esc_html( 'BBB hosting providers', 'bigbluebutton' ) . '</a>' ); ?></li>
-						</ol> -->
 						<div class="bbb-row">
 							<p id="bbb_endpoint_label" class="bbb-col-left bbb-important-label"><?php esc_html_e( 'EndPoint URL', 'bigbluebutton' ); ?>: </p>
 							<input class="bbb-col-right" type="text" name="bbb_url" size=50 value="<?php echo esc_url( $bbb_settings['bbb_url'] ); ?>" aria-labelledby="bbb_endpoint_label">
@@ -212,7 +206,7 @@
 	</div>
 	<div class="zvc-position-floater-right">
 		<div class="zvc-information-sec">
-			<img width="100%" height="40" src="<?php echo VIDEO_CONF_WITH_BBB_IMG_URL . '/learndash-logo.webp'; ?>" title="LearnDash LMS Development Service" alt="LearnDash LMS Development Service"/>
+			<img width="70%" height="25" src="<?php echo VIDEO_CONF_WITH_BBB_IMG_URL . '/learndash-logo.webp'; ?>" title="LearnDash LMS Development Service" alt="LearnDash LMS Development Service"/>
 				<h3>Need help with LMS Building?</h3>
 				<p>Being officially recognized as LearnDash LMS experts, we're here to aid you with your customization needs.</p>
 				<a target="_blank" rel="noopener"

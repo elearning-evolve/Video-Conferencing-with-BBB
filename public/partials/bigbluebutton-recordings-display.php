@@ -12,12 +12,12 @@
 				</a>
 				<?php if ( $recording_description_exist ) : ?>
 				<a href="<?php echo esc_url( $sort_fields['description']->url ); ?>" class="flex-row flex-row-<?php echo esc_attr( $columns ); ?> <?php echo esc_html( $sort_fields['description']->header_classes ); ?>" role="columnheader">
-					<?php esc_html_e( 'Description' ); ?>
+					<?php esc_html_e( 'Description', 'bigbluebutton' ); ?>
 					<i class="<?php echo esc_attr( $sort_fields['description']->classes ); ?>"></i>
 				</a>
 				<?php endif; ?>
 				<a href="<?php echo esc_url( $sort_fields['date']->url ); ?>" class="flex-row flex-row-<?php echo esc_attr( $columns ); ?> <?php echo esc_html( $sort_fields['date']->header_classes ); ?>" role="columnheader">
-					<?php esc_html_e( 'Date' ); ?>
+					<?php esc_html_e( 'Date', 'bigbluebutton' ); ?>
 					<i class="<?php echo esc_attr( $sort_fields['date']->classes ); ?>"></i>
 				</a>
 				<div class="flex-row flex-row-<?php echo esc_attr( $columns ); ?>" role="columnheader"><?php esc_html_e( 'Action' ); ?></div>
@@ -34,8 +34,8 @@
 						<?php echo esc_html( urldecode( $recording->metadata->{'recording-name'} ) ); ?>
 						<?php if ( $manage_bbb_recordings ) { ?>
 							<i id="edit-recording-name-<?php echo esc_attr( $recording->recordID ); ?>"
-								title="<?php esc_html_e( 'Edit' ); ?>"
-								aria-label="<?php esc_html_e( 'Edit' ); ?>"
+								title="<?php esc_html_e( 'Edit', 'bigbluebutton' ); ?>"
+								aria-label="<?php esc_html_e( 'Edit', 'bigbluebutton' ); ?>"
 								data-record-id="<?php echo esc_attr( $recording->recordID ); ?>"
 								data-record-value="<?php echo esc_attr( urldecode( $recording->metadata->{'recording-name'} ) ); ?>"
 								data-record-type="name"
